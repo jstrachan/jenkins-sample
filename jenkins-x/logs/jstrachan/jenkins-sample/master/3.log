@@ -1,0 +1,60 @@
+
+Showing logs for build [32mjstrachan-jenkins-sample-master-d5jqj-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-s7rr2[0m
+{"level":"warn","ts":1581587752.6482525,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581587752.6487763,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-jenkins-sample-master-d5jqj-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-x7k8s[0m
+{"level":"warn","ts":1581587753.1488838,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581587753.1505888,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-jenkins-sample-master-d5jqj-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-jenkins-sample-master-d5jqj-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-jenkins-sample-master-d5jqj-wvznq[0m
+{"level":"warn","ts":1581587778.3011804,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581587779.3020358,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/jenkins-sample.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-jenkins-sample-master-d5jqj-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-jenkins-sample-master-d5jqj-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mjstrachan-jenkins-sample-master-d5jqj-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-run[0m
+2020-02-13 09:56:31.268+0000 [id=1]	WARNING	j.branch.WorkspaceLocatorImpl#getWorkspaceRoot: JENKINS-2111 path sanitization ineffective when using legacy Workspace Root Directory ‘/workspace/build’; switch to ‘${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}’ as in JENKINS-8446 / JENKINS-21942
+Started
+Running in Durability level: PERFORMANCE_OPTIMIZED
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /workspace/build
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+GOT CONTEXT FOR Build
+[Pipeline] echo
+Hello world!
+[Pipeline] echo
+message: 
+[Pipeline] echo
+param2: 
+[Pipeline] sh
++ ls -la
+total 28
+drwxr-xr-x 3 root root 4096 Feb 13 09:56 .
+drwxrwxrwx 5 root root 4096 Feb 13 09:56 ..
+drwxr-xr-x 7 root root 4096 Feb 13 09:56 .git
+-rw-r--r-- 1 root root  459 Feb 13 09:56 Jenkinsfile
+-rw-r--r-- 1 root root   88 Feb 13 09:56 OWNERS
+-rw-r--r-- 1 root root  104 Feb 13 09:56 OWNERS_ALIASES
+-rwxr-xr-x 1 root root   29 Feb 13 09:56 jenkins-x.yml
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
