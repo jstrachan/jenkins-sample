@@ -1,0 +1,6 @@
+approvers:
+- jenkins-x-bot-test
+- jstrachan
+reviewers:
+- jenkins-x-bot-test
+- jstrachan
